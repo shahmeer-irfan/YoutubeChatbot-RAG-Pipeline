@@ -1,0 +1,16 @@
+indexing is the process of preparing your knowledge base for llm for efficient query search It contains 4 sub-steps:
+
+FIRST STEP:
+1)Document Ingestion through langchain loaders (pyPDFLoader, YoutubeLoaders etc)
+2)Text Chunking - Breaking Documents into small meaningfull chunks for better semantic search.(RecursiveCharacterTextSplitter etc)
+3)Embedding Generation.
+4) Storage in a Vector Store - along with chunk text + metadata in a vector database.
+
+SECOND STEP:
+retrieval - real-time process of finding the most relevant pieces of information from a pre-built index.
+
+THIRD STEP:
+Augmentation - making prompt that contains query and relevant docs.
+
+FOURTH STEP:
+Generation - It is the final step where a llm uses the users query and the retrieved and augmentated context to generate a response.
